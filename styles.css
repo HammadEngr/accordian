@@ -70,6 +70,14 @@ p {
 .hide{
   display: none;
 }
+.btncolor{
+  background-color: #8338ec;
+  color: white;
+  border-radius: 5px;
+}
+.rotate{
+  transform: rotate(180deg);
+}
 
 
 /***************************** Desktop Display *****************************/
