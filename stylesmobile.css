@@ -1,0 +1,138 @@
+body {
+  background-image: linear-gradient(#8338ec , #3a86ff);
+  margin: 0 0;
+}
+p, h1 {
+  font-family: sans-serif;
+  margin: 0 0;
+}
+p {
+  font-size: 0.8rem;
+  line-height: 20px;
+}
+.main-box{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  padding: 0 0;
+}
+/********************************** Graphics *******************************/
+.bg-pattern-mobile{
+  background-color: transparent;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  z-index: 1;
+}
+.bgm1, .bgm3{
+  position: absolute;
+  width: 70%;
+}
+.bgm2{
+  position: absolute;
+  width: 20%;
+  left: 50px;
+  top: 145px;
+}
+/*********************************** FAQs ***********************************/
+
+.FAQs-box{
+  text-align:center;
+  background-color: white;
+  border-radius: 20px;
+  width: 300px;
+  position: relative;
+  bottom: 135px;
+  /* z-index: -1; */
+}
+.FAQ{
+  margin-top: 100px;
+  padding: 10px 20px;
+  box-sizing:border-box;
+}
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-style: none;
+  padding: 20px 0;
+  width: 100%;
+  background-color: transparent;
+  margin: 0 0;
+  font-weight: bold;
+}
+.hide{
+  display: none;
+}
+
+
+/***************************** Desktop Display *****************************/
+@media screen and (min-width: 800px)  {
+  .main-box, .FAQs-box, .FAQ{
+    all: initial;
+  }
+  body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box{
+    background-image: url("images/illustration-box-desktop.svg");
+    width: 8%;
+    height: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 6%;
+    z-index: 2;
+    top: 48%;
+  }
+  .main-box{
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    width: 80%;
+    overflow: hidden;
+  }
+  .FAQs-box{
+    flex: 2;
+    margin: 30px 20px;
+    position: relative;
+    right: 7%;
+  }
+  .btn:hover{
+    color: #F47C57;
+    cursor: pointer;
+  }
+  .bg-pattern-mobile{
+    background-color: transparent;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    right: 100px;
+  }
+  .bgm1{
+    position: absolute;
+    width: 150%;
+    left: -300px;
+  }
+  .bgm3{
+    position: absolute;
+    width: 80%;
+  }
+  .bgm2{
+    display: none;
+  }
+
+}
