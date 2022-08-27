@@ -1,15 +1,11 @@
-var btns = document.querySelectorAll(".btn").length;
-for (i=0; i<btns; i++){
-  document.querySelectorAll('.btn')[i].addEventListener("click",function(){
-    var qclass = this.id;
-    for (p=0; p<5; p++){
-      // document.querySelectorAll(".answer")[p].classList.add("hide");
-      // document.querySelectorAll('.downarrow')[p].classList.remove("rotate");
+$("button").click(function(){
+  var qid = this.id;
+  for (p=0; p<5; p++)
+  if (this.id === "b"+(p+1)){
+  // $(".questions").css("color","black");
+  $(".a"+(p+1)).slideToggle();
+  $(".d"+(p+1)).toggleClass("rotate");
+  $("#b"+(p+1)).toggleClass("btncolor");
+  }
 
-      if (qclass === "b"+(p+1)){
-
-      document.querySelector(".a"+(p+1)).classList.toggle("hide");
-      document.querySelector(".d"+(p+1)).classList.toggle("rotate");
-    }}
-  })
-}
+})
